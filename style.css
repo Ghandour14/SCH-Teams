@@ -61,7 +61,7 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helv
 .logo{animation:floaty 4s ease-in-out infinite}
 
 /* responsive */
-@media (max-width:880px){.content{grid-template-columns:1fr}.logo{width:120px;height:120px}}
+@media (max-width:950px){.content{grid-template-columns:1fr}.logo{width:120px;height:120px}}
 
 /* small */
 .small{font-size:13px;color:#9bdab1}
