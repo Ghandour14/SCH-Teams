@@ -1,0 +1,65 @@
+/* Matrix background canvas */
+#matrix {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: .7;
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  mix-blend-mode: screen;
+}
+.glitch::before {
+  transform: translate(1px, 0);
+  color: #009e0b;
+  animation: gl1 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+  transform: translate(-1px, 0);
+  color: #009e0b;
+  animation: gl2 1.8s infinite linear alternate-reverse;
+}
+@keyframes gl1 {
+  0% { clip-path: inset(0 0 0 0); }
+  50% { clip-path: inset(5% 0 15% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+@keyframes gl2 {
+  0% { clip-path: inset(0 0 0 0); }
+  50% { clip-path: inset(15% 0 5% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .glitch::before,
+  .glitch::after {
+    animation: none;
+  }
+  .reveal {
+    transition: none;
+  }
+}

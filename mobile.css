@@ -1,0 +1,332 @@
+/* Mobile Responsiveness Fixes for Snake Chaos House */
+
+/* Mobile-first approach with responsive typography */
+:root {
+  /* Responsive font sizes */
+  --font-size-hero: clamp(1.8rem, 5vw, 3.5rem);
+  --font-size-h2: clamp(1.5rem, 4vw, 2.5rem);
+  --font-size-h3: clamp(1.2rem, 3vw, 2rem);
+  --font-size-body: clamp(0.9rem, 2.5vw, 1.2rem);
+  --font-size-nav: clamp(1rem, 2.5vw, 1.25rem);
+  
+  /* Responsive spacing */
+  --space-mobile: 16px;
+  --space-tablet: 24px;
+  --space-desktop: 32px;
+}
+
+/* Override inline styles with responsive alternatives */
+.hero-title {
+  font-family: sch, Oxanium, Inter, system-ui !important;
+  color: green !important;
+  font-size: var(--font-size-hero) !important;
+  line-height: 1.2 !important;
+  margin-bottom: var(--space-mobile) !important;
+}
+
+.section-title {
+  font-family: sch, Oxanium, Inter, system-ui !important;
+  color: rgb(153, 255, 0) !important;
+  font-size: var(--font-size-h2) !important;
+  margin-bottom: var(--space-mobile) !important;
+}
+
+.track-title, .workshop-title {
+  font-family: sch, Oxanium, Inter, system-ui !important;
+  color: rgb(23, 210, 23) !important;
+  font-size: var(--font-size-h3) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.track-item, .workshop-description {
+  color: rgb(255, 255, 255) !important;
+  font-family: sch, Inter, system-ui !important;
+  font-size: var(--font-size-body) !important;
+  line-height: 1.5 !important;
+}
+
+.terminal-text {
+  font-family: sch, 'JetBrains Mono', monospace !important;
+  font-size: var(--font-size-body) !important;
+  color: greenyellow !important;
+  line-height: 1.4 !important;
+}
+
+/* Navigation improvements for mobile */
+.nav {
+  padding: 0 var(--space-mobile);
+}
+
+.nav-inner {
+  height: auto;
+  min-height: 64px;
+  padding: 0.5rem 0;
+}
+
+.brand {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.snake-logo img {
+  width: 60px !important;
+  height: 60px !important;
+  margin-top: 0 !important;
+}
+
+.brand-text {
+  font-size: var(--font-size-nav) !important;
+  margin-top: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Mobile menu improvements */
+@media (max-width: 860px) {
+  .menu {
+    padding: var(--space-mobile);
+    gap: 0.5rem;
+  }
+  
+  .menu a {
+    font-size: var(--font-size-nav) !important;
+    margin-top: 0 !important;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+  }
+  
+  .nav-toggle {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Hero section mobile optimization */
+.hero {
+  padding-top: 80px;
+  padding-bottom: var(--space-mobile);
+}
+
+.hero-inner {
+  gap: var(--space-mobile);
+  text-align: center;
+}
+
+.hero-copy {
+  order: 1;
+}
+
+.hero-visual {
+  order: 2;
+  margin-top: var(--space-mobile);
+}
+
+.tagline {
+  font-size: var(--font-size-body);
+  margin-bottom: var(--space-mobile);
+}
+
+.cta {
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-body);
+  min-height: 44px; /* Ensure touch-friendly targets */
+  min-width: 120px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Cards and grid improvements */
+.cards {
+  gap: var(--space-mobile);
+  margin-top: var(--space-mobile);
+}
+
+.card {
+  padding: var(--space-mobile);
+}
+
+.track ul, .workshop-list {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.track li {
+  margin-bottom: 0.5rem;
+}
+
+/* Timeline improvements for mobile */
+.timeline {
+  padding-left: 16px;
+  margin-top: var(--space-mobile);
+}
+
+.entry {
+  margin-bottom: var(--space-mobile);
+  padding-left: 12px;
+}
+
+.entry h3 {
+  font-size: var(--font-size-h3) !important;
+  margin-bottom: 0.5rem;
+}
+
+.entry p {
+  font-size: var(--font-size-body);
+  margin-bottom: 0.75rem;
+}
+
+/* Terminal component mobile fixes */
+.terminal {
+  margin-bottom: var(--space-mobile);
+}
+
+.term-body {
+  padding: var(--space-mobile);
+}
+
+.term-body pre {
+  font-size: var(--font-size-body) !important;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Footer mobile optimization */
+.footer-inner {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.footer p {
+  font-size: var(--font-size-body);
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 480px) {
+  :root {
+    --space-mobile: 20px;
+  }
+  
+  .snake-logo img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .brand-text {
+    font-size: clamp(1.2rem, 3vw, 1.5rem) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-mobile: var(--space-tablet);
+  }
+  
+  .hero {
+    padding-top: 100px;
+  }
+  
+  .hero-inner {
+    text-align: left;
+  }
+  
+  .hero-copy {
+    order: 0;
+  }
+  
+  .hero-visual {
+    order: 1;
+    margin-top: 0;
+  }
+  
+  .snake-logo img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .brand {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .cta {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --space-mobile: var(--space-desktop);
+  }
+  
+  .snake-logo img {
+    width: 130px !important;
+    height: 130px !important;
+    margin-top: 20px !important;
+  }
+  
+  .brand-text {
+    margin-top: 20px !important;
+  }
+}
+
+/* Ensure custom fonts load properly on mobile */
+@font-face {
+  font-family: sch;
+  src: url(binxchr.ttf);
+  font-display: swap; /* Improve loading performance */
+}
+
+/* Fallback for when custom fonts don't load */
+.sch-fallback {
+  font-family: 'Courier New', monospace, system-ui;
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .btn:hover {
+    transform: none;
+    box-shadow: 0 0 16px var(--neon);
+  }
+  
+  .card:hover {
+    transform: none;
+    box-shadow: 0 0 20px rgba(57,255,20,.2);
+  }
+  
+  .menu a:hover {
+    background: rgba(57,255,20,.15);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .snake-svg,
+  .glitch::before,
+  .glitch::after,
+  .reveal {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --neon: #00ff00;
+    --fg: #ffffff;
+    --bg-0: #000000;
+  }
+}
+
