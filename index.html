@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SCH Club — Register</title>
+  <meta name="description" content="SCH Club registration — click to open the Google Form" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <canvas id="bgCanvas" class="bg-canvas" aria-hidden></canvas>
+
+    <main class="card" role="main" aria-labelledby="club-title">
+      <header class="header">
+        <div class="logo" aria-hidden><span class="snake-logo" aria-hidden="true"><img style="width: 120px;height: 120px;" src="Team_Logo1.0_R_Main_sticker.png" alt="Snake Chaos House Logo"></span>   </div>
+        <div class="title">
+          <h1 style="color: rgb(7, 193, 7); font-family: sch; font-size: 60px;letter-spacing: 6px;" id="club-title">SCH</h1>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="about">
+<section class="section" id="about" aria-label="About us">
+      <div class="container grid-2">
+        <div class="terminal card reveal">
+          <div class="term-head">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="term-title">about.sch</span>
+          </div>
+          <div class="term-body">
+            <pre class="type terminal-text" data-lines='[
+"We are Snake Chaos House.", 
+"Tech-first. Dark-mode by default.",
+"Workshops. Events. Hands-on learning.",
+"Break limits. Build skills."]'></pre>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+      
+        </div>
+
+        <aside class="panel">
+          <h3>Register</h3>
+          <p class="muted">We collect: name, uni ID, email, major, Level , National ID , Phone Number , Address </p>
+
+          <div class="actions">
+            <a id="openForm" class="btn neon" href="#" role="button" aria-label="Open Google Form">
+              <span class="pulse"></span>
+              Open Google Form
+            </a>
+
+            <div class="copy-row">
+              <input id="formLink" readonly value="https://docs.google.com/forms/d/e/1FAIpQLSclBB9lQd0p2qutlMdV2UkejSghYI6qVaIr-No6f5w0V1Mftg/viewform?usp=sharing&ouid=101797331822369799162" aria-label="Google Form link">
+              <button id="copyBtn" class="btn mini">Copy</button>
+            </div>
+
+            
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        
+      </footer>
+    </main>
+  </div>
+
+  <script src="js.js"></script>
+  <script src="typewriter.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
